@@ -1,15 +1,18 @@
 <template>
   <div class="hello">
-    {{msg}}
+    {{this.$store.state.count}}
+    <div>
+      <button type="" @click="add">button</button>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'hello',
-  data () {
-    return {
-      msg: 'hello'
+  methods: {
+    add(){
+      this.$store.commit('adds', 10);
     }
   }
 }
