@@ -5,6 +5,14 @@ import App from './App'
 import store from "./store";
 import router from './router'
 
+// The third plg
+window.$ = window.jQuery = require('jquery')
+window.bs = require('bootstrap')
+
+// css
+import 'bootstrap/dist/css/bootstrap.css'
+import './assets/css/index.css'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

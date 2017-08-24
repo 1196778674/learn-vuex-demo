@@ -5,7 +5,7 @@
       <button type="" @click="add">button</button>
     </div>
     <div>
-      <li v-for="(key, item) in this.$store.state.list">
+      <li v-for="(item, key) in this.$store.state.list">
         <input type="text" name="" class="form-control" v-model="item.name" value="">
         <input type="text" name="" class="form-control" v-model="item.age" value="">
         <div class="checkbox">
@@ -17,18 +17,25 @@
       </li>
     </div>
     <button type="" @click="addList">addList</button>
+    <button type="" @click="log">log</button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'hello',
+  created(){
+
+  },
   methods: {
     add(){
       this.$store.commit('adds', 10);
     },
     addList(){
       this.$store.commit('addList');
+    },
+    log(){
+      this.$store.commit('log');
     }
   }
 }

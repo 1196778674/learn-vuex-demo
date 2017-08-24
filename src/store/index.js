@@ -8,10 +8,15 @@ const mutations = {
 	},
 	addList(state){
 		state.list.push({name: '', age: '', checked: false});
+	},
+	log(state){
+		console.log(state.list);
 	}
 };
 const getters = {
-
+	getList(state){
+		return state.list;
+	}
 };
 const actions = {
 
