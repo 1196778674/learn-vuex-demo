@@ -16,18 +16,16 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse navbar-ex1-collapse">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
+						<li v-for="item in nav_list">
+							<a href="javascript:;" title="">{{item.name}}</a>
+						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<!-- <li><a href="#">Link</a></li> -->
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{user_name}} <b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-								<li><a href="#">Separated link</a></li>
+								<li v-for="item in drop_list"><a href="#">{{item.name}}</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -43,10 +41,12 @@ export default {
   name: 'Index',
   data(){
   	return {
-  		title: this.$store.state.index.title
+  		title: this.$store.state.index.title,
+  		nav_list: this.$store.state.index.nav_list,
+  		user_name: this.$store.state.index.user_name,
+  		drop_list: this.$store.state.index.drop_list
   	}
   },
-
 };
 </script>
 
