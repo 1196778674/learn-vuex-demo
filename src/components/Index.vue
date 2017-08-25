@@ -1,6 +1,8 @@
 <template>
 	<div>
-		<vu-header></vu-header>
+		<div class="container">
+			index
+		</div>
 	</div>
 </template>
 
@@ -12,9 +14,6 @@ export default {
   	return {
 
   	}
-  },
-  components: {
-  	vuHeader: require('../tpl/header.vue')
   },
   created () {
 

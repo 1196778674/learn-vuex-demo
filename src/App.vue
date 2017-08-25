@@ -1,12 +1,17 @@
 <template>
   <div id="app">
+  	<vu-header></vu-header>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+
+  components: {
+  	vuHeader: require('./tpl/header.vue')
+  },
 }
 </script>
 
