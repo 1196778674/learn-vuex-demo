@@ -17,7 +17,7 @@
 				<div class="collapse navbar-collapse navbar-ex1-collapse">
 					<ul class="nav navbar-nav">
 						<li v-for="item in nav_list">
-							<router-link :to="item.url" replace>{{item.name}}</router-link>
+							<router-link :to="item.url">{{item.name}}</router-link>
 						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
