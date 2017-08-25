@@ -1,23 +1,58 @@
 <template>
-  <div class="hello">
-    {{this.$store.state.count}}
-    <div>
-      <button type="" @click="add">button</button>
-    </div>
-    <div>
-      <li v-for="(item, key) in this.$store.state.list">
-        <input type="text" name="" class="form-control" v-model="item.name" value="">
-        <input type="text" name="" class="form-control" v-model="item.age" value="">
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" v-model="item.checked" value="">
-            选择
-          </label>
+  <div id="hello">
+    <div class="container">
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <div class="thumbnail">
+          <img data-src="#" alt="" src="../assets/logo.png" height="200" width="200">
+          <div class="caption">
+            <h3>Title</h3>
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+            <p>
+              <a href="#" class="btn btn-primary">Action</a>
+            </p>
+          </div>
         </div>
-      </li>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <div class="thumbnail">
+          <img data-src="#" alt="" src="../assets/logo.png" height="200" width="200">
+          <div class="caption">
+            <h3>Title</h3>
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+            <p>
+              <a href="#" class="btn btn-primary">Action</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <div class="thumbnail">
+          <img data-src="#" alt="" src="../assets/logo.png" height="200" width="200">
+          <div class="caption">
+            <h3>Title</h3>
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+            <p>
+              <a href="#" class="btn btn-primary">Action</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <ul class="pagination">
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+      </ul>
     </div>
-    <button type="" @click="addList">addList</button>
-    <button type="" @click="log">log</button>
   </div>
 </template>
 
@@ -28,35 +63,10 @@ export default {
 
   },
   methods: {
-    add(){
-      this.$store.commit('adds', 10);
-    },
-    addList(){
-      this.$store.commit('addList');
-    },
-    log(){
-      this.$store.commit('log');
-    }
+
   }
 }
 </script>
 
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
 </style>
