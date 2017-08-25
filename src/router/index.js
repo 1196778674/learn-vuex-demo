@@ -20,7 +20,7 @@ export default new Router({
       },
       children: [
         {
-          path: '/home',
+          path: 'home',
           component: function(resolve){
             require(['@/components/Hello'], resolve)
           }

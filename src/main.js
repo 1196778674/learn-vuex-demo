@@ -8,6 +8,7 @@ import router from './router'
 // The third plg
 window.$ = window.jQuery = require('jquery')
 window.bs = require('bootstrap')
+window.store = require('store')
 
 // css
 import 'bootstrap/dist/css/bootstrap.css'
