@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-  	<vu-header></vu-header>
     <router-view></router-view>
   </div>
 </template>
@@ -9,9 +8,6 @@
 export default {
   name: 'app',
 
-  components: {
-  	vuHeader: require('./tpl/header.vue')
-  },
 }
 </script>
 

@@ -1,21 +1,31 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
-import Index from '@/components/Index'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'Index',
-      component: Index
+      path: '/login',
+      name: 'Login',
+      component: function(resolve){
+        require(['@/components/Login'], resolve)
+      }
     },
     {
-      path: '/home',
-      name: 'Hello',
-      component: Hello
-    }
+      path: '/',
+      name: 'Index',
+      component: function(resolve){
+        require(['@/components/Index'], resolve)
+      },
+      children: [
+        {
+          path: '/home',
+          component: function(resolve){
+            require(['@/components/Hello'], resolve)
+          }
+        }
+      ]
+    },
   ]
 })
