@@ -18,7 +18,7 @@ export default {
     vuHeader: require('../tpl/header.vue')
   },
   created () {
-
+    console.log(this.$store.state.header.title);
   }
 };
 </script>

@@ -69,13 +69,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#hello{
+html{
   background: red;
-  .container{
-    background: blue;
-    .thumbnail{
-      background: #ccc;
-    }
-  }
 }
 </style>
